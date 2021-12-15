@@ -1,0 +1,33 @@
+<div class="profile-wrapper">
+  <mat-card class="profile-card">
+    <mat-card-title>{{title}}</mat-card-title>
+  <form #profileForm="ngForm">
+    <div class="form-item">
+      <!-- form fields start -->
+      <mat-form-field class="form-field">
+        <mat-label class="label"> Username </mat-label>
+        <input matInput type="text" disabled  value="{{userDetails.userName}}">
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label> Email </mat-label>
+        <input matInput type="text" disabled  value="{{userDetails.emailId}}">
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label class="label"> First Name </mat-label>
+        <input [disabled] = disabledFlag  matInput type="text" [(ngModel)]="userDetails.firstName" name="firstName" >
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label> Last Name </mat-label>
+        <input [disabled] = disabledFlag matInput type="text" [(ngModel)]="userDetails.lastName" name="lastName">
+      </mat-form-field>
+        <mat-card-actions>
+        <button mat-raised-button color="primary" class="save-btn" (click)="setName(profileForm)">Save</button>
+        </mat-card-actions>
+      <!-- form fields end -->
+    </div>
+  </form>
+  <!-- loading status of profile-->
+  <p><i>{{loader}}</i></p>
+</mat-card>
+
+<router-outlet></router-outlet>

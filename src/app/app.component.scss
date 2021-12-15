@@ -1,0 +1,23 @@
+// profile css start
+.profile-wrapper{
+  margin: auto;
+  p{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .profile-card {
+    max-width: 600px;
+    margin: 50px auto auto;
+  }
+  .form-field{
+    width: 100%;
+  }
+  mat-form-field {
+    font-size: 18px;
+  }
+  mat-form-field.mat-form-field-should-float label {
+    font-size: 13px;
+  }
+}
+// profile css end
+
